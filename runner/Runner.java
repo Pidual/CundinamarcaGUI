@@ -8,13 +8,13 @@ public class Runner {
     
     public static void main(String[] args) {
         
-        try {
+            try {
 
-            Presenter presenter = new Presenter();
-        } catch (IOException e) {
-
-        
-            e.printStackTrace();
-        }
+                new Presenter();
+                
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+         
     }
 }

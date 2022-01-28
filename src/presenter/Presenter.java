@@ -11,5 +11,4 @@ public class Presenter {
     public Presenter() throws IOException {
         gui = new GraphicalUserInterface();
     }
-    
 }

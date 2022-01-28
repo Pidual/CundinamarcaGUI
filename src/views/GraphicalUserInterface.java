@@ -15,6 +15,7 @@ public class GraphicalUserInterface extends JFrame{
     private HeaderPanel headP; 
     private SecondPanel secondP;
     private ThirdPanel thirdP;
+    private FourthPanel fourthPanel;
 
     public GraphicalUserInterface() throws IOException {
         super("Goal Tracker Calendario");  
@@ -45,6 +46,11 @@ public class GraphicalUserInterface extends JFrame{
         thirdP.setPreferredSize(getPreferredSize());
         thirdP.setBackground(new Color(27,86,143,255));
         add(thirdP);
+
+        fourthPanel = new FourthPanel();
+        fourthPanel.setPreferredSize(getPreferredSize());
+        add(fourthPanel);
+
     }
 
     

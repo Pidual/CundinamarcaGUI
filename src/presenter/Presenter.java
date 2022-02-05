@@ -6,9 +6,10 @@ import views.GraphicalUserInterface;
 
 public class Presenter {
     
-    private GraphicalUserInterface gui;
+    // private GraphicalUserInterface gui;
     
     public Presenter() throws IOException {
-        gui = new GraphicalUserInterface();
+        // gui = 
+        new GraphicalUserInterface();
     }
 }

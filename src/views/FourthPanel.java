@@ -1,11 +1,13 @@
 package views;
 
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
 
 public class FourthPanel extends JPanel{ //SlideShowPanel
     
     private JComboBox combobox;
+    private JButton button;
     private String [] lista = {"papu","lince","crack","mastodonte","mostruo"};
 
     public FourthPanel(){
@@ -13,7 +15,11 @@ public class FourthPanel extends JPanel{ //SlideShowPanel
         combobox = new JComboBox<>(lista);
         add(combobox);
 
-        combobox.
+        button = new JButton("Presiona para mejorar la vida");
+        add(button);
+
+        
+
     }
 
 

@@ -19,7 +19,7 @@ public class SecondPanel extends JPanel{
     public SecondPanel() throws IOException{
         this.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
-        BufferedImage myPicture = ImageIO.read(new File("resources/logo-gobernacion.jpg"));
+        BufferedImage myPicture = ImageIO.read(new File("src/resources/logo-gobernacion.jpg"));
         imageLogo = new JLabel(new ImageIcon(myPicture));
         gbc.insets = new Insets(0,0,0,40);
         add(imageLogo,gbc);
@@ -31,7 +31,7 @@ public class SecondPanel extends JPanel{
         add(searchBar,gbc);
 
         gbc.gridx = 2;
-        myPicture = ImageIO.read(new File("resources/lupa.png"));
+        myPicture = ImageIO.read(new File("src/resources/lupa.png"));
         lupaLogo = new JLabel(new ImageIcon(myPicture));
         add(lupaLogo,gbc);
 

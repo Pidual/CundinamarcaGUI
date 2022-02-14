@@ -1,9 +1,12 @@
 package views;
 
 
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 import java.awt.GridBagLayout;
@@ -20,8 +23,9 @@ public class HeaderPanel extends JPanel{
     public HeaderPanel() throws IOException{
         this.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
+        this.setSize(this.getWidth(),70);
 
-        ImageIcon icon = new ImageIcon("resources/header_govco.png");
+        ImageIcon icon = new ImageIcon("src/resources/header_govco.png");
         imageLogo = new JLabel(icon);
 
         gbc.anchor = GridBagConstraints.NORTH;
@@ -29,7 +33,7 @@ public class HeaderPanel extends JPanel{
         gbc.insets = new Insets(0,0,0,400);
         add(imageLogo,gbc);
 
-        ImageIcon myPicture = new ImageIcon("resources/llave4.jpg");
+        ImageIcon myPicture = new ImageIcon("src/resources/llave4.jpg");
         imageKey = new JLabel(myPicture);
         gbc.gridx = 2;
         gbc.insets = new Insets(0,0,0,0);

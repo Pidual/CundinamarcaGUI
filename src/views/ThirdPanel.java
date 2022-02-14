@@ -1,13 +1,12 @@
 package views;
 
-import javax.swing.JButton;
-import javax.swing.JPanel;
+import views.ButtonMods.ButtonModed;
 
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
+import javax.swing.*;
+import java.awt.*;
 
-public class ThirdPanel extends JPanel{
-    
+public class ThirdPanel extends JPanel {
+
     private JButton inicioButton;
     private JButton gobernacionButton;
     private JButton transparenciaButton;
@@ -18,44 +17,69 @@ public class ThirdPanel extends JPanel{
     private JButton contratacionButton;
     private JButton secretariasYEntidadesButton;
 
-    public ThirdPanel(){
+    public ThirdPanel() {
         this.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
-    
-        inicioButton = new JButton("inicio");
-        add(inicioButton,gbc);
+
+        inicioButton = new JButton("INICIO");
+        addMouseListenerYellowAndWhiteAndRemoveBorder(inicioButton);
+        add(inicioButton, gbc);
 
         gbc.gridx = 1;
         gobernacionButton = new JButton("GOBERNACION");
-        add(gobernacionButton,gbc);
+        addMouseListenerYellowAndWhiteAndRemoveBorder(gobernacionButton);
+        add(gobernacionButton, gbc);
 
         gbc.gridx = 2;
         transparenciaButton = new JButton("TRANSPARENCIA");
-        add(transparenciaButton,gbc);
+        addMouseListenerYellowAndWhiteAndRemoveBorder(transparenciaButton);
+        add(transparenciaButton, gbc);
 
-        
         gbc.gridx = 3;
         serviciosAlCiudadanoButton = new JButton("SERVICIO AL CIUDADANO");
-        add(serviciosAlCiudadanoButton,gbc);
+        addMouseListenerYellowAndWhiteAndRemoveBorder(serviciosAlCiudadanoButton);
+        add(serviciosAlCiudadanoButton, gbc);
 
         gbc.gridx = 4;
         participaButton = new JButton("PARTICIPA");
-        add(participaButton,gbc);
+        addMouseListenerYellowAndWhiteAndRemoveBorder(participaButton);
+        add(participaButton, gbc);
 
         gbc.gridx = 5;
         noticiasButton = new JButton("NOTICIAS");
-        add(noticiasButton,gbc);
+        addMouseListenerYellowAndWhiteAndRemoveBorder(noticiasButton);
+        add(noticiasButton, gbc);
 
         gbc.gridx = 6;
         normatividadButton = new JButton("NORMATIVIDAD");
-        add(normatividadButton,gbc);
+        addMouseListenerYellowAndWhiteAndRemoveBorder(normatividadButton);
+        add(normatividadButton, gbc);
 
         gbc.gridx = 7;
         contratacionButton = new JButton("CONTRATACION");
-        add(contratacionButton,gbc);
+        addMouseListenerYellowAndWhiteAndRemoveBorder(contratacionButton);
+        add(contratacionButton, gbc);
 
         gbc.gridx = 8;
         secretariasYEntidadesButton = new JButton("SECRETARIAS Y ENTIDADES");
-        add(secretariasYEntidadesButton,gbc);
+        addMouseListenerYellowAndWhiteAndRemoveBorder(secretariasYEntidadesButton);
+        add(secretariasYEntidadesButton, gbc);
     }
+
+    private void addMouseListenerYellowAndWhiteAndRemoveBorder(JButton button) {
+        button.setForeground(Color.WHITE);
+        button.setBorderPainted(false);
+        button.setUI(new ButtonModed());
+        button.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                button.setForeground(Color.YELLOW);
+            }
+
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                button.setForeground(Color.WHITE);
+            }
+        });
+    }
+
+
 }

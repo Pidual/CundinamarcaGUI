@@ -20,7 +20,7 @@ public class HeaderPanel extends JPanel{
     private JLabel imageKey;
     private JLabel textLabel;
     
-    public HeaderPanel() throws IOException{
+    public HeaderPanel(){
         this.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         this.setSize(this.getWidth(),70);

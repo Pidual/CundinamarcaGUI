@@ -26,7 +26,7 @@ public class FourthPanel extends JPanel implements ActionListener { //SlideShowP
             {"src/resources/Foto4.jpg","<html>Dignatarios de tres provincias toman<br> posesión en Juntas de Acción Comunal</html>\n"}};
 
 
-    public FourthPanel() throws IOException {
+    public FourthPanel(){
 
         pic = new JLabel();
         textLabel = new JLabel();

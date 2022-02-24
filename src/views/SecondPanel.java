@@ -15,10 +15,17 @@ public class SecondPanel extends JPanel {
     private JLabel imageLogo;
     private JTextField searchBar;
 
-    public SecondPanel() throws IOException {
+    public SecondPanel(){
         this.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
-        BufferedImage myPicture = ImageIO.read(new File("src/resources/logo-gobernacion.jpg"));
+        BufferedImage myPicture = null;
+
+        try {
+            myPicture = ImageIO.read(new File("src/resources/logo-gobernacion.jpg"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         imageLogo = new JLabel(new ImageIcon(myPicture));
         gbc.insets = new Insets(0, 0, 0, 40);
         add(imageLogo, gbc);

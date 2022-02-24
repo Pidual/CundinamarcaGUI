@@ -4,6 +4,8 @@ import views.ButtonMods.ButtonModed;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ThirdPanel extends JPanel {
 
@@ -16,6 +18,7 @@ public class ThirdPanel extends JPanel {
     private JButton normatividadButton;
     private JButton contratacionButton;
     private JButton secretariasYEntidadesButton;
+    private JLabel image;
 
     public ThirdPanel() {
         this.setLayout(new GridBagLayout());
@@ -23,6 +26,17 @@ public class ThirdPanel extends JPanel {
 
         inicioButton = new JButton("INICIO");
         addMouseListenerYellowAndWhiteAndRemoveBorder(inicioButton);
+
+        image = new JLabel();
+        ImageIcon imgThisImg = new ImageIcon("src/resources/TheProgramingPose.jpg");
+        image.setIcon(imgThisImg);
+        inicioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, image, "La pose de programacion", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+
         add(inicioButton, gbc);
 
         gbc.gridx = 1;
